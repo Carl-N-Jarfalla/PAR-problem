@@ -1,0 +1,52 @@
+\colorgrids % gör att svarsrutnäten är ljusgrå
+\colorfillwithdottedlines
+\setlength{\gridlinewidth}{0.7pt}
+\definecolor{GridColor}{gray}{0.9}
+%\pointsinrightmargin 
+\setlength{\rightpointsmargin}{2cm}
+%\pointformat{\fbox{\phantom{\themarginpoints }/\themarginpoints}}
+\marginpointname{}
+
+% Svenska namn till poänglista
+%\pointpoints{Poäng}{Poäng}
+%\bonuspointpoints{Bonuspoäng}{Bonuspoäng}
+\pointpoints{}{}
+\bonuspointpoints{}{}
+\totalformat{Uppgift \thequestion: \totalpoints{} poäng}
+\hqword{Uppgift:}
+\hpgword{Sida:}
+\hpword{Poäng:}
+\hsword{Resultat:}
+\htword{Total}
+
+%För att skriva ut fråge namn och inga siffror
+\qformat{\sc\thequestiontitle\dotfill\thepoints 
+\vrule depth 1em width 0pt
+} 
+
+\newcommand{\mild}{\emoji{hot-pepper}}
+\newcommand{\medel}{\emoji{hot-pepper}\emoji{hot-pepper}}
+\newcommand{\het}{\emoji{hot-pepper}\emoji{hot-pepper}\emoji{hot-pepper}}
+
+\firstpageheader{\bfseries Inlämning utkast:\draft , Slutlig:\final}{}{\large\bfseries Namn:\enspace\makebox[2in]{\hrulefill}}
+\runningheader{}{}{\oddeven{\large\bfseries Namn:\enspace\makebox[2in]{\hrulefill}}{}}% skriver bara ut namn på varanan sida. Dvs en gång per papper vid dubbelsidig utrskrift.
+
+\firstpagefooter{\class}{\thepage\ (\numpages)}{}
+\runningfooter{\class}{\thepage\ (\numpages)}{}
+
+
+\newcommand{\ovning}{
+\usepackage{draftwatermark}
+\SetWatermarkColor{red!10}
+\SetWatermarkScale{1}
+\SetWatermarkText{Övning}     %Watermark text
+%\usepackage{pgfmorepages}
+%\pgfmorepagesloadextralayouts
+%\pgfpagesuselayout{repeated 2-up}[a4paper,landscape]
+}
+
+
+% For an exam, single spacing is most appropriate
+\singlespacing
+% \onehalfspacing
+% \doublespacing

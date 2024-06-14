@@ -1,0 +1,61 @@
+\documentclass[12pt]{exam} %addpoints, togs bort för att testa andra poäng
+\usepackage[swedish]{babel}
+%\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{mathtools}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{kmath}
+\usepackage{kerkis}
+\usepackage{systeme}
+\usepackage{graphicx}
+\usepackage[parfill]{parskip}
+\usepackage[a4paper,left=1cm, right=1cm,top=1.5cm, bottom=2cm]{geometry}
+\usepackage{siunitx}
+\usepackage{enumitem}
+\usepackage{multicol}
+\usepackage[sharp]{easylist}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.8}
+\usepgfplotslibrary{statistics}
+\usepackage{tkz-euclide}
+\usetikzlibrary{colorbrewer}
+\usetikzlibrary{arrows}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{float}
+\usepackage{xcolor}
+\usepackage{setspace}
+\usepackage{datatool}
+%\DTLloaddb{koder}{test.txt}
+\usepackage[sc]{titlesec}
+\usepackage{tabularray}
+\usepackage[strict]{changepage}
+\usepackage{wrapfig}
+\usepackage{emoji}
+\setemojifont{TwemojiMozilla}
+\usepackage{caption}
+
+
+\usepackage[most]{tcolorbox} 
+\definecolor{block-gray}{gray}{0.95}
+
+
+\newtcolorbox{zitat}[2][]{%
+    colback=block-gray,
+    grow to right by=-10mm,
+    grow to left by=-10mm, 
+    boxrule=0pt,
+    boxsep=0pt,
+    breakable,
+    enhanced jigsaw,
+    borderline west={4pt}{0pt}{gray},
+    title={#2\par},
+    colbacktitle={block-gray},
+    coltitle={black},
+    fonttitle={\large\bfseries},
+    attach title to upper={},
+    #1,
+    text width=4.5cm,
+}
+

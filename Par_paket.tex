@@ -1,0 +1,97 @@
+% !TeX root = Par_paket.tex
+%!TEX program = lualatex
+
+\input{preamble}
+\input{matte_setup}
+\input{prov_setup}
+
+%%%% Inställningar för provet %%%%
+
+% Kommentera bort om det inte ska stå övning på provet
+%\ovning 
+
+\newcommand{\class}{Ma2c}
+\newcommand{\term}{HT 24}
+\newcommand{\nummer}{1}
+\newcommand{\draft}{17/5}
+\newcommand{\final}{19/5}
+%\newcommand{\timelimit}{15 minuter} 
+%\newcommand{\hjalp}{Chromebook med geogebra / Räknare, Formelsamling} % I minuter
+\pgfmathdeclarefunction{gauss}{2}{%
+  \pgfmathparse{1/(#2*sqrt(2*pi))*exp(-((x-#1)^2)/(2*#2^2))}%
+}
+\sisetup{locale = DE}
+
+\begin{document}
+\begin{center}
+{\Large \textsc{PAR Problem nr.}\nummer}\\[0.3cm]
+\end{center}
+
+\fbox{\fbox{\parbox{\textwidth}{{
+\noindent \centering PAR Processen\\
+Skriv ett utkast \hspace{0.3cm} Reflektera \hspace{1.1cm} Feedback \hspace{1.3cm} Förbättra \hspace{1.2cm} Lämna in \phantom{te}\\
+\includegraphics*[width=15cm]{img/par_prosess.png}\\}
+\phantom{testtesttset}(Hemma) \hspace{1.4cm} (Hemma) \hspace{0.5cm} (Fredags lektionen) \hspace{0.3cm} (Hemma) \hspace{0.5cm} (Tisdags lektionen) }}}
+\smallskip \vspace{0.5cm}
+
+    
+
+
+% -------------------------------------------------------------
+
+%Here, the questions begin
+\begin{questions}
+%\setlength\itemsep{2\baselineskip}
+
+\input{uppgifter/glasspaketet.tex} %Ändra till den uppgift som ska byggas
+
+
+%-------------------------------------------------------------------
+%Här kommer svars områden och sånt
+\newpage
+\begin{center}
+  Feedback av:\enspace\makebox[2in]{\hrulefill}\\
+\end{center}
+
+\smallskip
+\noindent Styrkor \hfill Kommunikation \hfill Förslag \hrule
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.5cm, page=3]{img/Bilder.pdf}
+    \caption*{Visar alla steg.}
+    \includegraphics[width=1.5cm, page=2]{img/Bilder.pdf}
+    \caption*{Förklarar varför,\\ inte bara vad.}
+    \includegraphics[width=1.5cm, page=1]{img/Bilder.pdf}
+    \caption*{Använd namn.}
+    \includegraphics[width=1.5cm, page=5]{img/Bilder.pdf}
+    \caption*{Tydliga definitioner av variabler.}
+    \includegraphics[width=1.5cm, page=6]{img/Bilder.pdf}
+    \caption*{Använder diagram.}
+\end{figure}
+
+\noindent Styrkor \hfill Korrekthet \hfill Förslag \hrule
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1.5cm, page=8]{img/Bilder.pdf}
+  \caption*{Korrekta beräkningar}
+  \includegraphics[width=1.5cm, page=9]{img/Bilder.pdf}
+  \caption*{Testat olika sätt.}
+  \includegraphics[width=1.5cm, page=10]{img/Bilder.pdf}
+  \caption*{Rimliga svar.}
+
+\end{figure}
+\newpage
+\section*{Utkast}
+\fillwithgrid{\stretch{1}}
+\newpage
+\fillwithgrid{\stretch{1}}
+\newpage
+\section*{Slutinlämning}
+\fillwithgrid{\stretch{1}}
+\newpage
+\fillwithgrid{\stretch{1}}
+
+
+\end{questions}
+\end{document}
